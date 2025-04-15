@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:endprod/telas/tela_dois_litros.dart';
+import 'package:endprod/telas/tela_350_ml.dart';
+import 'package:endprod/telas/tela_250_ml.dart';
+import 'package:endprod/telas/tela_200_ml.dart';
 
 class TelaInicio extends StatelessWidget {
   const TelaInicio({super.key});
@@ -65,8 +68,11 @@ class TelaInicio extends StatelessWidget {
                 context,
                 '350 ML',
                 () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Em desenvolvimento')),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Tela350ML(),
+                    ),
                   );
                 },
               ),
@@ -75,8 +81,11 @@ class TelaInicio extends StatelessWidget {
                 context,
                 '250 ML',
                 () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Em desenvolvimento')),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Tela250ML(),
+                    ),
                   );
                 },
               ),
@@ -85,8 +94,11 @@ class TelaInicio extends StatelessWidget {
                 context,
                 '200 ML',
                 () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Em desenvolvimento')),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Tela200ML(),
+                    ),
                   );
                 },
               ),
